@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import Button from "@/components/Button.vue";
 import InputText from "@/components/InputText.vue";
+import { useTheme } from "@/theme/useTheme";
+
+const { changeTheme } = useTheme();
 </script>
 
 <template>
   <main>
+    <h1>Welcome to the components list</h1>
+    <Button @click="changeTheme">Change Theme</Button>
     <Button>Button Test</Button>
     <Button>
       <img

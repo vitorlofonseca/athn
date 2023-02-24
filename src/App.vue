@@ -1,25 +1,8 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
-import { useTheme } from "./theme/useTheme";
-import Button from "@/components/Button.vue";
-
-const { changeTheme } = useTheme();
+import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Components</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <Button @click="changeTheme">Change Theme</Button>
-      </nav>
-    </div>
-  </header>
-
   <RouterView />
 </template>
 
