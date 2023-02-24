@@ -12,6 +12,7 @@ const props = defineProps<{ dark?: Boolean }>();
 
 <style lang="scss" scoped>
 .v-input {
+  width: 100%;
   color: var(--color-text);
 
   &--dark {
