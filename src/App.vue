@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
 import { useTheme } from "./theme/useTheme";
+import Button from "@/components/Button.vue";
 
 const { changeTheme } = useTheme();
 </script>
@@ -20,9 +21,9 @@ const { changeTheme } = useTheme();
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/">Components</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <button @click="changeTheme">Change Theme</button>
+        <Button @click="changeTheme">Change Theme</Button>
       </nav>
     </div>
   </header>
