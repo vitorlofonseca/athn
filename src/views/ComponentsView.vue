@@ -6,6 +6,15 @@ import InputText from "@/components/InputText.vue";
 <template>
   <main>
     <Button>Button Test</Button>
+    <Button>
+      <img
+        alt="Facebook logo"
+        src="@/assets/icons/social-networks/facebook-white.svg"
+        width="20"
+        height="20"
+      />
+      Button with icon Test</Button
+    >
     <div class="background-dark">
       <InputText label="Input dark text example" :dark="true"></InputText>
     </div>
