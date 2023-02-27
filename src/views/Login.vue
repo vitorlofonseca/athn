@@ -10,15 +10,6 @@ import Button from "@/components/Button.vue";
       <AppTitle />
       <h1>Welcome to athn</h1>
 
-      <div class="login-form">
-        <InputText label="Email" :dark="true"></InputText>
-        <InputText type="password" label="Password" :dark="true"></InputText>
-      </div>
-
-      <Button :type="'white'">Sign in</Button>
-
-      <span>or</span>
-
       <div class="sso-buttons-container">
         <Button :type="'white'">
           <img
@@ -71,7 +62,6 @@ import Button from "@/components/Button.vue";
   max-width: 580px;
   align-items: center;
 
-  .login-form,
   .sso-buttons-container {
     display: flex;
     flex-direction: column;
