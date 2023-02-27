@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Topbar from "@/components/Topbar/Topbar.vue";
+</script>
 
 <template>
-  <h1>Welcome to athn</h1>
+  <Topbar />
 </template>
 
 <style scoped lang="scss"></style>
