@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
-import Button from "@/components/Button.vue";
 </script>
 
 <template>
-  <v-app>
+  <v-app class="app">
     <RouterView />
   </v-app>
 </template>
 
 <style scoped>
+.app {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
 .change-theme-btn {
   position: absolute;
   top: 0;
