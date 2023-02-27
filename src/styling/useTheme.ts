@@ -1,14 +1,16 @@
+import { ref } from "vue";
+
 export const useTheme = () => {
-  let theme = "light";
+  let theme = ref("light");
   const body = document.querySelector("body");
 
   const changeTheme = () => {
-    if (theme === "light") {
+    if (theme.value === "light") {
       body?.setAttribute("data-theme", "dark");
-      theme = "dark";
+      theme.value = "dark";
     } else {
       body?.removeAttribute("data-theme");
-      theme = "light";
+      theme.value = "light";
     }
   };
 

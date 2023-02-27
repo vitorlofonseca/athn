@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Button from "@/components/Button.vue";
 import InputText from "@/components/InputText.vue";
-import { useTheme } from "@/theme/useTheme";
+import { useTheme } from "@/styling/useTheme";
 
 const { changeTheme } = useTheme();
 </script>

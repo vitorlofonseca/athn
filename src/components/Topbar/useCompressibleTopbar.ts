@@ -2,7 +2,6 @@ import type { Ref } from "vue";
 
 export const useCompressibleTopbar = (topbar: Ref<null>) => {
   const topbarEl = topbar.value;
-  console.log(topbarEl);
 
   window.addEventListener("scroll", () => {
     const screenPosition = window.scrollY;

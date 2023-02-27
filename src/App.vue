@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
 import Button from "@/components/Button.vue";
-import { useTheme } from "@/theme/useTheme";
-
-const { changeTheme } = useTheme();
 </script>
 
 <template>
-  <Button class="change-theme-btn" @click="changeTheme">Change Theme</Button>
-  <RouterView />
+  <v-app>
+    <RouterView />
+  </v-app>
 </template>
 
 <style scoped>
