@@ -1,60 +1,35 @@
 <script setup lang="ts">
 import Topbar from "@/components/Topbar/Topbar.vue";
 import ArtPreview from "@/components/ArtPreview.vue";
+import ArtistPreview from "@/components/ArtistPreview.vue";
 </script>
 
 <template>
   <Topbar />
   <div class="home-body">
-    <h2>Our curation for you</h2>
+    <div class="home-section">
+      <h2>Our curation for you</h2>
 
-    <div class="curation">
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
-      <ArtPreview></ArtPreview>
+      <div class="curation">
+        <ArtPreview />
+        <ArtPreview />
+        <ArtPreview />
+        <ArtPreview />
+        <ArtPreview />
+        <ArtPreview />
+        <ArtPreview />
+        <ArtPreview />
+      </div>
+    </div>
+
+    <div class="home-section">
+      <h2>Best seller artists</h2>
+
+      <div class="curation">
+        <ArtistPreview />
+        <ArtistPreview />
+        <ArtistPreview />
+      </div>
     </div>
   </div>
 </template>
@@ -62,7 +37,7 @@ import ArtPreview from "@/components/ArtPreview.vue";
 <style scoped lang="scss">
 @import "@/styling/breakpoints.scss";
 
-.home-body {
+.home-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,7 +55,7 @@ import ArtPreview from "@/components/ArtPreview.vue";
 }
 
 @media screen and (max-width: $medium) {
-  .home-body {
+  .home-section {
     align-items: unset;
 
     .curation {
