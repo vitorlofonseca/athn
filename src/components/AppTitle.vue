@@ -5,6 +5,8 @@
 </template>
 
 <style lang="scss" scoped>
+@import "@/styling/breakpoints.scss";
+
 .title {
   font-style: normal;
   font-weight: 400;
@@ -15,5 +17,11 @@
   /* white */
 
   color: var(--vt-c-white-soft);
+}
+
+@media screen and (max-width: $small) {
+  .title {
+    font-size: 42px;
+  }
 }
 </style>

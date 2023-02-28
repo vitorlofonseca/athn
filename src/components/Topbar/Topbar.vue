@@ -22,8 +22,6 @@ onMounted(() => {
       alt="Hamburger menu button"
       src="@/assets/icons/navigation/hamburger-menu.svg"
       class="hamburger-menu-btn"
-      width="30"
-      height="30"
       @click="drawerIsOpened = !drawerIsOpened"
     />
 
@@ -40,11 +38,22 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+@import "@/styling/breakpoints.scss";
+
+.welcoming-section {
+  width: 90%;
+}
+
 .welcoming-section,
 .container {
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .hamburger-menu-btn {
@@ -87,6 +96,22 @@ onMounted(() => {
 
     .hamburger-menu-btn {
       margin-top: unset;
+    }
+  }
+}
+
+@media screen and (max-width: $small) {
+  .welcoming-section {
+    h2 {
+      display: none;
+    }
+  }
+
+  .container {
+    .hamburger-menu-btn {
+      margin-top: 15px;
+      width: 25px;
+      height: 25px;
     }
   }
 }
