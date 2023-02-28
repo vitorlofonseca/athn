@@ -113,6 +113,12 @@ onMounted(() => {
       width: 25px;
       height: 25px;
     }
+
+    &--compressed {
+      .hamburger-menu-btn {
+        margin-top: unset;
+      }
+    }
   }
 }
 </style>
