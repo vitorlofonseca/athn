@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { currentPrice } = defineProps<{ currentPrice?: number }>();
+</script>
 
 <template>
   <div class="art-preview">
@@ -11,6 +13,15 @@
       <div>Date: 1642</div>
       <div>Dimensions: 363cm x 437cm</div>
       <div>From Rijksmuseum, Netherlands</div>
+      <div v-if="currentPrice">
+        Current price:
+        {{
+          new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR",
+          }).format(currentPrice)
+        }}
+      </div>
     </div>
   </div>
 </template>

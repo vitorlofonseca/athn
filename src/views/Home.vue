@@ -31,6 +31,20 @@ import ArtistPreview from "@/components/ArtistPreview.vue";
         <ArtistPreview />
       </div>
     </div>
+
+    <div class="home-section">
+      <h2>Our current actions</h2>
+
+      <div class="curation">
+        <ArtPreview :currentPrice="43132.02" />
+        <ArtPreview :currentPrice="43132.02" />
+        <ArtPreview :currentPrice="43132.02" />
+        <ArtPreview :currentPrice="43132.02" />
+        <ArtPreview :currentPrice="43132.02" />
+        <ArtPreview :currentPrice="43132.02" />
+        <ArtPreview :currentPrice="43132.02" />
+      </div>
+    </div>
   </div>
 </template>
 
