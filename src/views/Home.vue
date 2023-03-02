@@ -5,8 +5,8 @@ import ArtistPreview from "@/components/ArtistPreview.vue";
 </script>
 
 <template>
-  <Topbar />
-  <div class="home-body">
+  <div>
+    <Topbar />
     <div class="home-section">
       <h2>Our curation for you</h2>
 
@@ -21,29 +21,29 @@ import ArtistPreview from "@/components/ArtistPreview.vue";
         <ArtPreview />
       </div>
     </div>
+  </div>
 
-    <div class="home-section">
-      <h2>Best seller artists</h2>
+  <div class="home-section">
+    <h2>Best seller artists</h2>
 
-      <div class="curation">
-        <ArtistPreview />
-        <ArtistPreview />
-        <ArtistPreview />
-      </div>
+    <div class="curation">
+      <ArtistPreview />
+      <ArtistPreview />
+      <ArtistPreview />
     </div>
+  </div>
 
-    <div class="home-section">
-      <h2>Our current actions</h2>
+  <div class="home-section">
+    <h2>Our current actions</h2>
 
-      <div class="curation">
-        <ArtPreview :currentPrice="43132.02" />
-        <ArtPreview :currentPrice="43132.02" />
-        <ArtPreview :currentPrice="43132.02" />
-        <ArtPreview :currentPrice="43132.02" />
-        <ArtPreview :currentPrice="43132.02" />
-        <ArtPreview :currentPrice="43132.02" />
-        <ArtPreview :currentPrice="43132.02" />
-      </div>
+    <div class="curation">
+      <ArtPreview :currentPrice="43132.02" />
+      <ArtPreview :currentPrice="43132.02" />
+      <ArtPreview :currentPrice="43132.02" />
+      <ArtPreview :currentPrice="43132.02" />
+      <ArtPreview :currentPrice="43132.02" />
+      <ArtPreview :currentPrice="43132.02" />
+      <ArtPreview :currentPrice="43132.02" />
     </div>
   </div>
 </template>

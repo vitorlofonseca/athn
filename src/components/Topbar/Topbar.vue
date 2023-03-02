@@ -3,14 +3,15 @@ import AppTitle from "../AppTitle.vue";
 import InputText from "@/components/InputText.vue";
 import SideMenu from "@/components/SideMenu.vue";
 import { useCompressibleTopbar } from "./useCompressibleTopbar";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, type Ref } from "vue";
 
 const topbar = ref(null);
-
+const { compressed = false } = defineProps<{ compressed?: boolean }>();
 const drawerIsOpened = ref(false);
+let topbarIsCompressed: Ref<boolean>;
 
 onMounted(() => {
-  useCompressibleTopbar(topbar);
+  topbarIsCompressed = useCompressibleTopbar(topbar, compressed);
 });
 </script>
 
@@ -31,6 +32,8 @@ onMounted(() => {
       <InputText label="Search for something" :dark="true"></InputText>
     </div>
   </div>
+
+  <div class="gap-topbar-spacing" v-if="topbarIsCompressed"></div>
   <SideMenu
     :drawerIsOpened="drawerIsOpened"
     @close-drawer="drawerIsOpened = !drawerIsOpened"
@@ -120,5 +123,9 @@ onMounted(() => {
       }
     }
   }
+}
+
+.gap-topbar-spacing {
+  height: 70px;
 }
 </style>
