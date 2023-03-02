@@ -1,7 +1,7 @@
 import { ref } from "vue";
 
 export const useTheme = () => {
-  let theme = ref("light");
+  const theme = ref("light");
   const body = document.querySelector("body");
 
   const changeTheme = () => {
